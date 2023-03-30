@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>MyChat</title>
+</head>
+<body>
+    <!-- containers and title -->
+
+    <div class="container my-4">
+        <h1 class="my-4 text-center">My Chat App</h1>
+
+    <!-- buttons for chatrooms -->
+
+    <div class="chat-rooms mb-3 text-center">
+        <div class="my-2">Choose a chatroom :</div>
+        <button class="btn btn-primary" id="general">@General</button>
+        <button class="btn btn-danger" id="gmaing">@Gaming</button>
+        <button class="btn btn-info" id="music">@Music</button>
+        <button class="btn btn-success" id="movie">@Movie</button>
+    </div>
+
+    <!-- chat list -->
+    <div class="chat-window">
+        <ul class="chat-list list-group">
+        </ul>
+    </div>
+
+
+    <!-- new chat room -->
+    <form class="new-chat my-3">
+        <div class="input-group">
+
+            <div class="input-group-prepend">
+                <div class="input-group-text">Your Message:</div>
+            </div>
+            <input type="text" id="message" class="form-control" required>
+            <div class="input-group-append">
+                <input type="submit" class="btn btn-dark" value="send">
+            </div>
+        </div>
+    </form>
+
+
+
+
+    <!-- update name form -->
+
+    <form class="new-name my-3">
+        <div class="input-group">
+
+            <!-- <div class="input-group-prepend">
+                <div class="input-group-text">Update Name:</div>
+            </div>
+            <input type="text" id="name" class="form-control" required>
+            <div class="input-group-append">
+                <input type="submit" class="btn btn-secondary" value="update">
+            </div> -->
+            <div id="otpless"></div>
+        </div>
+        <div class="update-mssg"></div>
+    </form>
+
+    </div>
+
+    <script type="text/javascript" src="https://otpless.com/auth.js"></script>
+    <!-- Get user's whatsapp number and name -->
+    <script type="text/javascript">
+      function otpless(otplessUser) {
+       var waName = otplessUser.waName;
+       var waNumber = otplessUser.waNumber;
+       // Signup/signin the user and redirect to next page
+      }
+    </script>
+
+
+
+
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <script defer src="scripts/init-firebase.js"></script>
+    <script defer src="scripts/chat.js"></script> 
+    <script defer src="scripts/ui.js"></script>   
+    <script defer src="scripts/app.js"></script> 
+
+      
+</body>
+</html>
